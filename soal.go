@@ -19,5 +19,18 @@ func platNo(tanggal int, plat string) bool {
 }
 
 func main() {
-	fmt.Print("Hello world")
+	var tanggal, i int
+	var plat string
+	var hasil bool
+	// siapkan 3 pasang masukan dengan format:
+	// tanggal plat_nomor
+	for i = 0; i < 3; i++ {
+		fmt.Scanln(&tanggal, &plat)
+		hasil = platNo(tanggal, plat)
+		if hasil {
+			fmt.Println("Tidak Melanggar")
+		} else {
+			fmt.Println("Melanggar")
+		}
+	}
 }
